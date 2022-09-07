@@ -1,0 +1,11 @@
+{
+  "CONVERT_FROM": "Currency to convert from:",
+  "SELECT_CURRENCY": "Select currency",
+  "CONVERT_TO": "Currency to convert to:",
+  "CURRENT_EXCHANGE_RATE": "Current exchange rate: 1",
+  "PURCHASE_COSTS": "Amount:",
+  "TOTAL_COSTS": "Amount Coverted:",
+  "SUBSCRIBE": "Subscribe to get rate notification",
+  "STANDARD_TAX_RATE": "Use standard tax type"
+  
+}
