@@ -1,0 +1,11 @@
+{
+  "CONVERT_FROM": "Moeda para converter de:",
+  "SELECT_CURRENCY": "Escolha a moeda",
+  "CONVERT_TO": "Moeda para converter:",
+  "CURRENT_EXCHANGE_RATE": "Taxa de câmbio atual: 1",
+  "PURCHASE_COSTS": "Valor:",
+  "TOTAL_COSTS": "Valor Covertido:",
+  "SUBSCRIBE": "Subscreva-se para receber notificação de taxa",
+  "STANDARD_TAX_RATE": "Usar tipo de imposto padrão"
+  
+}

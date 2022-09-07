@@ -1,0 +1,111 @@
+$lighter-purple: #b8adff;
+$light-purple: #9f95df;
+$medium-purple: #463e7a;
+$dark-purple: #2b264e;
+
+.rates-card {
+  width: 450px;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid $light-purple;
+  border-radius: 10px;
+
+  box-shadow: 15px 15px 42px -10px rgba(0, 0, 0, 0.42);
+  -webkit-box-shadow: 15px 15px 42px -10px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: 15px 15px 42px -10px rgba(0, 0, 0, 0.42);
+
+  .convert-select-container {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    &:first-child {
+      margin-right: 30px;
+    }
+
+    select {
+      font-size: 14px;
+      margin-top: 5px;
+      padding: 5px;
+      background-color: $dark-purple;
+      border: 1px solid $light-purple;
+      border-radius: 5px;
+      color: $light-purple;
+      cursor: pointer;
+    }
+  }
+
+  .base-exchange-container {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .costs-container {
+    display: block;
+    margin: 20px 0;
+
+    input {
+      width: 80px;
+      margin-right: 5px;
+      margin-top: 5px;
+      padding: 5px;
+      background-color: $dark-purple;
+      border: 1px solid $light-purple;
+      border-radius: 5px;
+      color: $light-purple;
+      cursor: pointer;
+      -moz-appearance: textfield;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      &:focus-visible {
+        outline: $light-purple auto 1px;
+      }
+
+      &:hover {
+        color: $lighter-purple;
+        background-color: $medium-purple;
+      }
+    }
+  }
+
+  .label {
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .total-costs {
+    margin-bottom: 10px;
+    color: rgb(63, 247, 26);
+  }
+
+  .import-button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    background-color: $dark-purple;
+    border: 1px solid $light-purple;
+    border-radius: 5px;
+    color: $light-purple;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    &:hover {
+      color: $lighter-purple;
+      background-color: $medium-purple;
+    }
+
+    &.flashing {
+      border: 1px solid #ddbd82;
+      color: #ddbd82;
+      background: linear-gradient(
+        90deg,
+        rgb(61, 44, 33) 0%,
+        rgb(62, 53, 30) 35%,
+        rgb(88, 91, 50) 100%
+      );
+    }
+  }
+}

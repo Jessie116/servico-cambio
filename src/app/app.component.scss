@@ -1,0 +1,26 @@
+$light-purple: #9f95df;
+$medium-purple: #463e7a;
+$dark-purple: #2b264e;
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $light-purple;
+
+  .flag-container {
+    display: flex;
+    flex-direction: row;
+
+    img {
+      display: inline;
+      border: 1px solid $light-purple;
+      border-radius: 2px;
+      cursor: pointer;
+
+      &:first-child {
+        margin-right: 3px;
+      }
+    }
+  }
+}

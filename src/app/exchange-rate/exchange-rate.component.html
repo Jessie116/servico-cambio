@@ -1,0 +1,77 @@
+<div class="rates-card">
+  <div class="convert-select-container">
+    <label class="label" for="purchase-value">
+      {{ "CONVERT_FROM" | translate }}
+    </label>
+    <select
+      [(ngModel)]="convertFrom"
+      (ngModelChange)="onConvertFromChange($event)"
+    >
+      <option disabled>{{ "SELECT_CURRENCY" | translate }}</option>
+      <option
+        *ngFor="let currency of currencies"
+        [value]="currency.id"
+        [hidden]="currency.id === convertFrom"
+      >
+        {{ currency.id }} - {{ currency.name }}
+      </option>
+    </select>
+  </div>
+
+  <div class="convert-select-container">
+    <label class="label" for="purchase-value">{{
+      "CONVERT_TO" | translate
+    }}</label>
+    <select [(ngModel)]="convertTo" (ngModelChange)="onConvertToChange($event)">
+      <option disabled>{{ "SELECT_CURRENCY" | translate }}</option>
+      <option
+        *ngFor="let currency of currencies"
+        [value]="currency.id"
+        [hidden]="currency.id === convertTo"
+      >
+        {{ currency.id }} - {{ currency.name }}
+      </option>
+    </select>
+  </div>
+
+  <div class="base-exchange-container">
+    {{ "CURRENT_EXCHANGE_RATE" | translate }} {{ convertFrom }} =
+    <span *ngIf="exchangeRates">
+      {{ exchangeRates.conversion_rates[convertTo].toFixed(2) }}
+      {{ convertTo }}
+    </span>
+  </div>
+
+  <div class="costs-container">
+    <label class="label" for="purchase-value">{{
+      "PURCHASE_COSTS" | translate
+    }}</label>
+    <input
+      id="purchase-value"
+      [(ngModel)]="purchaseCosts"
+      (ngModelChange)="onCostsChange()"
+      type="number"
+    />
+    <span>{{ convertFrom }}</span>
+    <span *ngIf="exchangeRates && purchaseCosts">
+      = {{ convertPurchaseValue().toFixed(2) }} {{ convertTo }}
+    </span>
+  </div>
+
+  
+
+  <div class="total-costs">
+    {{ "TOTAL_COSTS" | translate }} {{ getTotalCosts().toFixed(2) }}
+    {{ convertTo }}
+  </div>
+  <span>{{ "SUBSCRIBE"| translate  }}</span>
+
+  <div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Email" aria-label="Recipient's username" aria-describedby="button-addon2">
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary"(click)="showSuccess()" ngbTooltip="Will disappear in 10s"  type="button" id="button-addon2">Subscrever</button>
+    </div>
+  </div>
+</div>
+
+
